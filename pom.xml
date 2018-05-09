@@ -140,7 +140,26 @@
 			<scope>provided</scope>
 			<version>7.0</version>
 		</dependency>
-
+        <dependency>
+            <groupId>com.ibm.runtimetools</groupId>
+            <artifactId>javametrics-agent</artifactId>
+            <version>[1.2,2.0)</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.runtimetools</groupId>
+            <artifactId>javametrics-dash</artifactId>
+            <version>[1.2,2.0)</version>
+            <scope>provided</scope>
+            <type>war</type>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.runtimetools</groupId>
+            <artifactId>javametrics-rest</artifactId>
+            <version>[1.2,2.0)</version>
+            <scope>provided</scope>
+            <type>war</type>
+        </dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
