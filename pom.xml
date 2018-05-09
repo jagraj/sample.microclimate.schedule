@@ -140,6 +140,8 @@
 			<scope>provided</scope>
 			<version>7.0</version>
 		</dependency>
+
+        <!-- Configure javametrics monitoring Dependencies -->
         <dependency>
             <groupId>com.ibm.runtimetools</groupId>
             <artifactId>javametrics-agent</artifactId>
@@ -160,6 +162,8 @@
             <scope>provided</scope>
             <type>war</type>
         </dependency>
+        <!-- End Configuring javametrics monitoring Dependencies -->
+		
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
@@ -298,11 +302,12 @@
                             <jvmOptionsFile>${basedir}/src/main/liberty/config/jvm.options</jvmOptionsFile>
 							<packageFile>${package.file}</packageFile>
 							<include>${packaging.type}</include>
-							<bootstrapProperties>
-								<default.http.port>${testServerHttpPort}</default.http.port>
-								<default.https.port>${testServerHttpsPort}</default.https.port>
-							</bootstrapProperties>
-							<installAppPackages>project</installAppPackages>
+                           <bootstrapProperties>
+                                <default.http.port>${testServerHttpPort}</default.http.port>
+                                <default.https.port>${testServerHttpsPort}</default.https.port>
+                                <app.location>${project.artifactId}-${project.version}.war</app.location>
+                            </bootstrapProperties>							
+                            <installAppPackages>project</installAppPackages>
 						</configuration>
 					</plugin>
 				</plugins>
